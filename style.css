@@ -1,0 +1,74 @@
+
+body {
+    font-family: 'Crete Round', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3914cb;
+    overflow-x: hidden;
+}
+.header{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    border-bottom: 3px solid #3914cb;
+    
+}
+.navbar{
+    width: 20%;
+    display: flex;
+    justify-content:space-between;
+    margin-right: 70px;
+    list-style: none;
+}
+.navbar a{
+    color: #3914cb;
+    text-decoration: none;
+}
+
+.navbar .presente{
+    color: #3914cb;
+    text-decoration: none;
+    font-weight: bold;
+}
+.logo {
+    height: 70px;
+    width: 100px;
+    margin-left: 100px;
+}
+
+.total {
+    height: 500px;
+    width: 100%;
+    /* background-image:"./arquivos/img/allstargame.jfif" */
+} 
+/* .total .fundo {
+    height: 300px;
+    width: 300px;
+
+} */
+/* .total img {
+    display: flex;
+    justify-content: center;
+    height: 250;
+} */
+.banner {
+    height: 600px;
+    padding: 40px 0;
+    color: white;
+    background-image: url("");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .banner .total {
+    height: 400px;
+    font-size: 36px;
+    justify-content: center;
+    align-items: center;
+  }
