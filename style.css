@@ -41,34 +41,35 @@ body {
     margin-left: 100px;
 }
 
-.total {
-    height: 500px;
-    width: 100%;
-    /* background-image:"./arquivos/img/allstargame.jfif" */
-} 
-/* .total .fundo {
-    height: 300px;
-    width: 300px;
+        
 
-} */
-/* .total img {
-    display: flex;
-    justify-content: center;
-    height: 250;
-} */
-.banner {
-    height: 600px;
+.total {
+    height: 580px;
     padding: 40px 0;
+    font-size: 36px;
     color: white;
-    background-image: url("");
+    background-image: url("./arquivos/img/allstargame.jfif");
+    background-attachment: fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
-  }
+    align-items: flex-end;
+    width: 100%;
+    /* border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px; */
+    
   
-  .banner .total {
-    height: 400px;
-    font-size: 36px;
-    justify-content: center;
+    
+}
+.video {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: white;
+    display: flex;
     align-items: center;
-  }
+    flex-direction: column;
+ 
+}
+
+  
+ 
