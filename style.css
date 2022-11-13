@@ -66,16 +66,15 @@ body {
 .highlights {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    /* background-color: #006cb7; */
-    /* background-image: url("./arquivos/img/fundoquadra.jpg"); */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* padding-bottom: 30px; */
+    /* padding-bottom: 100px; */
     color: white;
     background-image: linear-gradient( to bottom, #006cb7, #ffffff );
     height: 475px;
+
 }
 .tittle {
     padding-top: 10px;
@@ -103,29 +102,63 @@ body {
     height: 350px;
     width: 100%;
     text-align: center;
-    /* background-color: #ed174b; */
     align-items:center;
     justify-content:center;
     display: flex;
     flex-direction: row;
+    padding-bottom: 50px;
 }
-.jogos .boxgame {
-    background-color: white;
+ .boxgame {
+    background-color: #4d95c8;
     height: 150px;
     width: 30%;
-    border: blue solid 2px;
+    border: black solid 2px;
+    border-radius: 10%;
     padding: 10px;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    
 }
+
+.boxgame img{
+    height: 70px;
+   
+}
+
 .motw{
-    height: 300px;
+    display: flex;
+    height: 350px;
     width: 100%;
-    /* background-color: #ffffff; */
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    flex-direction: row;
     background-image: linear-gradient( to top, #006cb7, #ffffff );
+}
+.boxplayer {
+    /* border: blue solid 2px; */
+    height: 300px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 17px;
+    
+}
+.boxplayer h3 {
+    margin-top: 0px;
+}
+.boxplayer h2 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: black;
+}
+.boxplayer img {
+    height: 200px;
+    
 }
 
 .footer{
