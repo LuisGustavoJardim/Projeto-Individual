@@ -61,7 +61,11 @@ body {
     padding-top: 50px;
  
 }
-.texto h2{
+.texto h1{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.texto h3{
     text-align: center;
     padding-bottom: 10px;
 }

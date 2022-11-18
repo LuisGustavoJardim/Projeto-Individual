@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./cadastrostyle.css">
+    <link rel="stylesheet" href="./loginstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
@@ -30,14 +32,31 @@
             </li>
         </ul>
     </div>
+    <div class="formulario">
+        <div class="containerform">
+            <form>
+                <h1>LOGIN</h1>
+                <label for="ipt_email">E-mail</label>
+                <input type="email" id="ipt_email" placeholder="E-mail" class="inputform" required>
+
+                <label for="ipt_senha">Senha</label>
+                <input type="password" placeholder="*****" id="ipt_senha" class="inputform"  required>
+
+                <div id="alerta">
+
+                </div>
+                <input onclick="entrar()" type="button" value="Entrar" class="submit">
+            </form>     
+        </div>
+    </div>
 
 
 
 
-    <!-- <div class="footer">
+   <div class="footer">
         <h4>Feito por um fã da LakerNation em homenagem ao Black Mamba <br>
         <span class="dono">Desenvolvido por Lg</span></h4>
         
-       </div>    -->
+       </div>   
 </body>
 </html>

@@ -32,7 +32,33 @@
             </li>
         </ul>
     </div>
-        <div class="formulario"></div>
+    <div class="formulario">
+        <div class="containerform">
+            <form>
+                <h1>CADASTRO</h1>
+
+                <label for="ipt_razão">Nome</label>
+                <input type="text" id="ipt_nome" placeholder="Nome" class="form-control" required>
+
+                <label for="ipt_t">CPF</label>
+                <input type="text" id="ipt_cpf" placeholder="000000000-00" maxlength="11" minlength="11"
+                    class="inputform" required>
+
+                <label for="ipt_email">Email</label>
+                <input type="email" id="ipt_email" placeholder="E-mail" class="inputform" required>
+
+                <label for="ipt_senha">Senha</label>
+                <input type="password" id="ipt_senha" placeholder="******" class="inputform" required>
+
+                <div id="msg_cadastro">
+
+                </div>
+
+                <input onclick="login()" type="submit" value="Cadastrar" class="submit">
+            </form>
+        </div>
+    </div>
+        
         
         
         

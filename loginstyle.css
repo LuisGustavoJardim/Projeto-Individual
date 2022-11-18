@@ -1,5 +1,4 @@
-
- .formulario{
+.formulario{
     height: 700px;
     background-image: url("./arquivos/img/kobefundo.png");
     display: flex;
@@ -13,10 +12,10 @@
     justify-content: center;
    background: #5f297c;
    border-radius: 10px;
-   height: 500px;
+   height: 400px;
    border: rgb(255, 255, 255) solid 2px;
-   color: white;
 }
+
 form{
     text-align: center;
     font-size: 20px;
@@ -38,19 +37,3 @@ form{
     border-radius: 5px;
 }
 
-.submit{
-    color: white;
-    font-size: 20px;
-    background: #d2b707;
-    margin-top: 10px;
-    margin-left: 10px;
-    cursor: pointer;
-    
-}
-
-
-
-.submit:hover{
-    transform: scale(1.05);
-    background: #07548b;
-}   /*
