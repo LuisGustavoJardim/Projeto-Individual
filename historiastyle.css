@@ -2,7 +2,9 @@ body {
     font-family: 'Crete Round', serif;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-image: url("./arquivos/img/coutbask.jpg");
+    background-position: center;
+    background-size: cover;
     /* overflow-x: hidden; */
     /* background-image: linear-gradient( to bottom, #006cb7, #ffffff ); */
 }
@@ -48,7 +50,7 @@ body {
 .total{
     padding-top: 90px;
     height: 600px;
-    background-image: url("./arquivos/img/coutbask.jpg");
+    /* background-image: url("./arquivos/img/coutbask.jpg"); */
     background-size: cover;
     display: flex;
     justify-content: flex-end;
@@ -68,4 +70,11 @@ body {
 .texto h3{
     text-align: center;
     padding-bottom: 10px;
+}
+.ntp{
+    display: flex;
+    background-color: black;
+    opacity: 0.80;
+    height: 300px;
+
 }

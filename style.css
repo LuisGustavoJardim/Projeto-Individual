@@ -129,8 +129,7 @@ body {
 
 .motw{
     display: flex;
-    height: 350px;
-    width: 100%;
+    height: 400px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -141,24 +140,29 @@ body {
 .boxplayer {
     /* border: blue solid 2px; */
     height: 300px;
-    width: 30%;
+    width: 20%;
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     font-size: 17px;
+    margin-left: 100px;
     
 }
 .boxplayer h3 {
     margin-top: 0px;
+    margin-right: 105px;
 }
 .boxplayer h2 {
     margin-bottom: 5px;
     margin-top: 5px;
     color: black;
+    margin-right: 105px;
 }
 .boxplayer img {
     height: 200px;
     width: 100%;
+    margin-right: 105px;
     
 }
 
