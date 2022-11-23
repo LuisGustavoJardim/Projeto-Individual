@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cadastrostyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./arquivos/img/faviconNba.png" type="image/x-icon">
+</head>
+<body>
+    <div class="body2">
+    <div class="header">
+        <a href="./index.html"><img  class="logo" src="./arquivos/img/Icon-nba.png" alt="ícone NBA"></a>
+        <ul class="navbar">
+            <li>
+               <a href="./index.html">Início</a> 
+            </li>
+            <li>
+                <a href="./historia.html">História</a>
+            </li>
+
+            <li class="presente"> 
+                <a href="./cadastro.html">Cadastro</a>
+            </li>
+            <li>
+                <a href="./login.html">Login</a>
+            </li>
+        </ul>
+    </div>
+    <div class="formulario">
+        <div class="containerform">
+            <form>
+                <h1>CADASTRO</h1>
+
+                <label for="ipt_razão">Nome</label>
+                <input type="text" id="ipt_nome" placeholder="Nome" class="form-control" required>
+
+                <label for="sel_time">Time</label>
+                <select name="" id="sel_time">
+                    <option value="">Escolha seu time</option>
+                    <option value="hawks">Atlanta Hawks</option>
+                    <option value="celtics">Boston Celtics</option>
+                    <option value="nets">Brooklyn Nets</option>
+                    <option value="hornets">Charlotte Hornets</option>
+                    <option value="bulls">Chicago Bulls</option>
+                    <option value="cavs">Cleveland Cavaliers</option>
+                    <option value="mavs">Dallas Mavericks</option>
+                    <option value="nuggets">Denver Nuggets</option>
+                    <option value="pistons">Detroit Pistons</option>
+                    <option value="warriors">Golden State Warriors</option>
+                    <option value="rockets">Houston Rockets</option>
+                    <option value="pacers">Indiana Pacers</option>
+                    <option value="clippers">LA Clipers</option>
+                    <option value="lakers">Los Angeles Lakers</option>
+                    <option value="grizzlies">Memphis Grizzlies</option>
+                    <option value="heat">Miami Heat</option>
+                    <option value="bucks">Milwaukee Bucks</option>
+                    <option value="wolves">Minessota Timberwolves</option>
+                    <option value="pelicans">New Orleans Pelicans</option>
+                    <option value="knicks">New York Knicks</option>
+                    <option value="thunder">Oklahoma City Thunder</option>
+                    <option value="magic">Orlando Magic</option>
+                    <option value="79ers">Philadelphia 76ers</option>
+                    <option value="suns">Phoenix Suns</option>
+                    <option value="blazers">Portland Trail Blazers</option>
+                    <option value="kings">Sacramento Kings</option>
+                    <option value="spurs">San Antonio Spurs</option>
+                    <option value="raptors">Toronto Raptors</option>
+                    <option value="jazz">Utah Jazz</option>
+                    <option value="wizards">Washington Wizards</option>
+                </select>
+
+                <label for="ipt_email">Email</label>
+                <input type="email" id="ipt_email" placeholder="E-mail" class="inputform" required>
+
+                <label for="ipt_senha">Senha</label>
+                <input type="password" id="ipt_senha" placeholder="******" class="inputform" required>
+
+                <div id="msg_cadastro">
+
+                </div>
+
+                <input onclick="login()" type="submit" value="Cadastrar" class="submit">
+            </form>
+        </div>
+    </div>
+        
+        
+        
+        
+        
+        <div class="footer">
+            <h4>Feito por um fã da LakerNation em homenagem ao Black Mamba <br>
+                <span class="dono">Desenvolvido por Lg</span></h4>
+                
+            </div>
+        </div>
+    
+</body>
+</html>

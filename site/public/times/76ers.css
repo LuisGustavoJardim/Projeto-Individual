@@ -1,0 +1,59 @@
+body {
+    font-family: 'Crete Round', serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+ 
+}
+.header{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    background-color: white;
+    border-bottom: 3px solid #006cb7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    
+}
+.navbar{
+    width: 30%;
+    display: flex;
+    justify-content:space-between;
+    margin-right: 70px;
+    list-style: none;
+}
+.navbar a{
+    color: #006cb7;
+    text-decoration: none;
+}
+
+.navbar .presente{
+    color: #006cb7;
+    text-decoration: none;
+    font-weight: bold;
+}
+.logo {
+    margin-top: 5px;
+    height: 65px;
+    width: 100px;
+    margin-left: 100px;
+}
+
+.footer{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #006cb7;
+    color: white;
+    border-top: black solid 2px;
+}
+
+.dono {
+    font-size: 12px;
+    
+}
