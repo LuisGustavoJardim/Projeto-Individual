@@ -10,17 +10,20 @@ body {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    height: 70px;
+    height: 80px;
     align-items: center;
     background-color: white;
     border-bottom: 3px solid #006cb7;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
     
 }
+ .header img {
+    width: 50% ;
+    padding-top: 3%;}
 .navbar{
     width: 30%;
     display: flex;
-    justify-content:space-between;
+    justify-content:flex-end;
     margin-right: 70px;
     list-style: none;
 }
@@ -34,9 +37,19 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
+.nome {
+    display: flex;
+    
+}
+.nome h1{
+    display: flex;
+    margin-right: 200px;
+    color: #006cb7;
+   height: 90%;
+
+}
 .logo {
-    margin-top: 5px;
-    height: 65px;
+    height: 70px;
     width: 100px;
     margin-left: 100px;
 }
@@ -56,4 +69,10 @@ body {
 .dono {
     font-size: 12px;
     
+}
+.quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

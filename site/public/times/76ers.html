@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NBA</title>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./cadastrostyle.css">
+    <link rel="stylesheet" href="./loginstyle.css">
     <link rel="stylesheet" href="./76ers.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,23 +16,180 @@
 </head>
 <body>
     <div class="header">
-        <a href="./Projeto-individual/index.html"><img  class="logo" src="./img-team/76ers.png" alt="ícone 76ers"></a>
+        <a href="./index.html"><img  class="logo" src="./img-team/76ers.png" alt="ícone NBA"></a>
         <ul class="navbar">
-            <li>
-               <a href="./index.html">Início</a> 
-            </li>
-            <li>
-                <a href="./historia.html">História</a>
-            </li>
-
-            <li> 
-                <a href="./cadastro.html">Cadastro</a>
-            </li>
-            <li>
-                <a href="./login.html">Login</a>
+                
+                <a href="../index.html">Sair</a>
             </li>
         </ul>
     </div>
+    <div class="quiz">
+        <div class="pergunta">
+
+            <H1><span class="teste">TESTE</span> <span class="seu">SEU</span> <span
+                    class="conhecimento">CONHECIMENTO</span></H1>
+
+            <p>1 – Qual a data de fundação do São Paulo?</p>
+            <select id="p1">
+                <option value="null" id="zerada1">Responda aqui</option><br>
+                <option value="certo">25 de janeiro de 1930</option>
+                <option value="errada">10 de março de 1950</option>
+                <option value="errada">7 de setembro de 1910</option>
+                <option value="errada">01 de abril de 1925</option>
+            </select>
+
+
+
+
+            <p> 2 – Qual o ano do primeiro título da libertadores do São Paulo?</p>
+            <select id="p2">
+                <option value="null" id="zerada2">Responda aqui</option><br>
+                <option value="errada">1990</option>
+                <option value="errada">1985</option>
+                <option value="certo">1992</option>
+                <option value="errada">1999</option>
+            </select>
+
+
+            <p> 3 – Qual é o jogador com mais gols feitos pelo São Paulo?</p>
+            <select id="p3">
+                <option value="null" id="zerada3">Responda aqui</option><br>
+                <option value="errada">Rogerioo Ceni</option>
+                <option value="certo">Serginho Chulapa</option>
+                <option value="errada">Rai</option>
+                <option value="errada">Luis Fabiano</option>
+            </select>
+
+
+
+            <p> 4 – Quem era o tecnico que comandava o time tri-campeão brasileiro em 2008?</p>
+            <select id="p4">
+                <option value="null" id="zerada4">Responda aqui</option><br>
+                <option value="certo">Muricy Ramalho</option>
+                <option value="errada">Pepe Guardiola</option>
+                <option value="errada">Tele Santana</option>
+                <option value="errada">Fernando Diniz</option>
+            </select>
+
+
+
+            <p> 5 – Qual foi o ano do primeiro titulo do São Paulo? </p>
+            <select id="p5">
+                <option value="null" id="zerada5">Responda aqui</option>
+                <option value="errada"> 1930</option>
+                <option value="errada"> 1932</option>
+                <option value="certo"> 1931</option>
+                <option value="errada"> 1935</option>
+            </select>
+
+
+
+            <p> 6 – Qual foi o primeiro titulo do São Paulo </p>
+            <select id="p6">
+                <option value="null" id="zerada6">Responda aqui</option><br>
+                <option value="certo">Campeonato Paulista</option>
+                <option value="errada">Campeonato Brasileiro</option>
+                <option value="errada">Copa do Brasil</option>
+                <option value="errada">Copa Libertadores da America</option>
+            </select>
+
+
+
+            <p> 7 – Em que que ano foi inaugurado o estadio Cicero Pompeu de Toledo? </p>
+            <select id="p7">
+                <option value="null" id="zerada7">Responda aqui</option>
+                <option value="errada">1955</option>
+                <option value="certo">1960</option>
+                <option value="errada">1970</option>
+                <option value="errada">1961</option>
+            </select>
+
+
+
+            <p> 8 – Quem era o capitão que levantou a taça no mundial de 2002?<br></p>
+            <select id="p8">
+                <option value="null" id="zerada8">Responda aqui</option><br>
+                <option value="certo">Rogerio Ceni</option>
+                <option value="errada">Lugano</option>
+                <option value="errada">Cafu</option>
+                <option value="errada">Zetti</option>
+            </select>
+
+
+
+            <p> 9 – Qual jogador que fez o gol do titulo mundial de 2002</p>
+            <select id="p9">
+                <option value="null" id="zerada9">Responda aqui</option>
+                <option value="errada">Aloisio Chulapa</option>
+                <option value="errada">Amoroso</option>
+                <option value="errada">Josué</option>
+                <option value="certo">Mineiro</option>
+            </select>
+
+
+            <p> 10 – Qual foi o ultimo titulo conquistado pelo São Paulo</p>
+            <select id="p10">
+                <option value="null" id="zerada10">Responda aqui</option>
+                <option value="errada">Sulamericana</option>
+                <option value="errada">Copa do Brasil</option>
+                <option value="certo">Campeonato Paulista</option>
+                <option value="errada">Campeonato Brasileiro</option>
+            </select>
+            <br>
+            <rr>
+
+                <button id="botão" onclick="enviar()">Enviar</button>
+                <div id="div_msg"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+<script>
+function enviar() {
+    var acertos = 0
+    if (p1.value == "null" || p2.value == "null" || p3.value == "null" || p4.value == "null" || p5.value == "null" || p6.value == "null" || p7.value == "null" || p8.value == "null" || p9.value == "null" || p10.value == "null") {
+        alert('Todas opções precisam ser preenchidas')
+    }
+    else {
+        if (p1.value == "certo") {
+            acertos++
+        }
+        if (p2.value == "certo") {
+            acertos++
+        }
+        if (p3.value == "certo") {
+            acertos++
+        }
+        if (p4.value == "certo") {
+            acertos++
+        }
+        if (p5.value == "certo") {
+            acertos++
+        }
+        if (p6.value == "certo") {
+            acertos++
+        }
+        if (p7.value == "certo") {
+            acertos++
+        }
+        if (p8.value == "certo") {
+            acertos++
+        }
+        if (p9.value == "certo") {
+            acertos++
+        }
+        if (p10.value == "certo") {
+            acertos++
+        }  
+        div_msg.innerHTML += `Você teve um total de ${acertos}`
+       
+    }
+}
+</script>
 <div class="footer">
     <h4>Feito por um fã da LakerNation em homenagem ao Black Mamba <br>
     <span class="dono">Desenvolvido por Lg</span></h4>

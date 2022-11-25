@@ -37,10 +37,10 @@
             <form>
                 <h1>CADASTRO</h1>
 
-                <label for="ipt_razão">Nome</label>
+                <label for="lbl_nome">Nome</label>
                 <input type="text" id="ipt_nome" placeholder="Nome" class="form-control" required>
 
-                <label for="sel_time">Time</label>
+                <label for="lbl_time">Time</label>
                 <select name="" id="sel_time">
                     <option value="">Escolha seu time</option>
                     <option value="hawks">Atlanta Hawks</option>
@@ -75,17 +75,17 @@
                     <option value="wizards">Washington Wizards</option>
                 </select>
 
-                <label for="ipt_email">Email</label>
+                <label for="lbl_email">Email</label>
                 <input type="email" id="ipt_email" placeholder="E-mail" class="inputform" required>
 
-                <label for="ipt_senha">Senha</label>
+                <label for="lbl_senha">Senha</label>
                 <input type="password" id="ipt_senha" placeholder="******" class="inputform" required>
 
                 <div id="msg_cadastro">
 
                 </div>
 
-                <input onclick="login()" type="submit" value="Cadastrar" class="submit">
+                <button onclick="cadastrar()" class="submit"> Cadastrar</button>
             </form>
         </div>
     </div>
@@ -103,3 +103,94 @@
     
 </body>
 </html>
+<script>
+    function cadastrar() {
+        
+        
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = ipt_nome.value;
+        var emailVar = ipt_email.value;
+        var senhaVar = ipt_senha.value;
+        var timeVar = sel_time.value;
+        var indexArroba = emailVar.indexOf('@')
+        var indexPonto = emailVar.indexOf('.')
+
+        if (nomeVar == "" || ipt_nome.value.length > 10) {
+            ipt_usuario.style.border = "1px solid red"
+            mensagem_erro.innerHTML = "Preencha os campos corretamente!";
+            erro.style.display = 'block'
+
+            finalizarAguardar();
+            return false;
+
+        }
+        if (emailVar == "") {
+            ipt_email.style.border = "1px solid red"
+            mensagem_erro.innerHTML = "Preencha os campos corretamente!";   
+            finalizarAguardar();
+            return false;
+
+        }
+        if(indexArroba == -1){
+            erro1.style.display = 'block'
+            finalizarAguardar();
+            return false;
+        }
+        if (indexPonto == -1){
+            erro2.style.display = 'block'
+            finalizarAguardar();
+            return false;
+        }
+        if (senhaVar == "") {
+            ipt_senha.style.border = "1px solid red"
+            finalizarAguardar();
+            return false;
+
+        }
+
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                timeServer: timeVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>
