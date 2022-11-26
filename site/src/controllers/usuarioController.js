@@ -28,6 +28,7 @@ function entrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
 
+
     if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
@@ -79,7 +80,7 @@ function cadastrar(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha, time)
+        usuarioModel.cadastrar(nome, email,time, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);

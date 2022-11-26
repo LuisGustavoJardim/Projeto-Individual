@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./arquivos/img/faviconNba.png" type="image/x-icon">
+    <script src="js/funcoes.js"></script>
 </head>
 <body>
     <div class="body2">
@@ -34,13 +35,14 @@
     </div>
     <div class="formulario">
         <div class="containerform">
-            <form>
-                <h1>CADASTRO</h1>
+                <div class="form">
 
-                <label for="lbl_nome">Nome</label>
-                <input type="text" id="ipt_nome" placeholder="Nome" class="form-control" required>
+                    <h1>CADASTRO</h1>
+                    
+                    <h2>Nome</h2>
+                    <input type="text" id="ipt_nome" placeholder="Nome" class="form-control" required>
 
-                <label for="lbl_time">Time</label>
+               <h2>Time</h2>
                 <select name="" id="sel_time">
                     <option value="">Escolha seu time</option>
                     <option value="hawks">Atlanta Hawks</option>
@@ -65,7 +67,7 @@
                     <option value="knicks">New York Knicks</option>
                     <option value="thunder">Oklahoma City Thunder</option>
                     <option value="magic">Orlando Magic</option>
-                    <option value="79ers">Philadelphia 76ers</option>
+                    <option value="76ers">Philadelphia 76ers</option>
                     <option value="suns">Phoenix Suns</option>
                     <option value="blazers">Portland Trail Blazers</option>
                     <option value="kings">Sacramento Kings</option>
@@ -75,18 +77,19 @@
                     <option value="wizards">Washington Wizards</option>
                 </select>
 
-                <label for="lbl_email">Email</label>
+                <h2>Email</h2>
                 <input type="email" id="ipt_email" placeholder="E-mail" class="inputform" required>
 
-                <label for="lbl_senha">Senha</label>
+                <h2>Senha</h2>
                 <input type="password" id="ipt_senha" placeholder="******" class="inputform" required>
 
                 <div id="msg_cadastro">
 
                 </div>
-
+                
                 <button onclick="cadastrar()" class="submit"> Cadastrar</button>
-            </form>
+            </div>
+               
         </div>
     </div>
         
@@ -117,10 +120,7 @@
         var indexPonto = emailVar.indexOf('.')
 
         if (nomeVar == "" || ipt_nome.value.length > 10) {
-            ipt_usuario.style.border = "1px solid red"
-            mensagem_erro.innerHTML = "Preencha os campos corretamente!";
-            erro.style.display = 'block'
-
+     
             finalizarAguardar();
             return false;
 

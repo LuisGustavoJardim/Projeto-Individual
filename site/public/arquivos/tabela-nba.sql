@@ -1,22 +1,22 @@
 create database nba;
 use nba;
 
-create table Usuário (
-idUsuário int primary key auto_increment,
-Nome varchar (45),
-Email varchar (45),
-Time varchar (45),
-Senha varchar (45));
+create table usuario (
+idUsuario int primary key auto_increment,
+nome varchar (45),
+rmail varchar (45),
+time varchar (45),
+senha varchar (45));
 
-create table Quiz (
+create table quiz (
 idQuiz int primary key auto_increment,
-FkUsuário int, foreign key (FkUsuário) references Usuário(idUsuário),
-Tentativas int);
+fkUsuario int, foreign key (fkUsuario) references usuario(idUsuario),
+tentativas int);
 
-Create table Pontuacao (
+create table pontuacao (
 idPontuacao int primary key auto_increment,
-Nota int,
-FkQuiz int, foreign key (FkQuiz) references Quiz(idQuiz));
+nota int,
+fkQuiz int, foreign key (fkQuiz) references quiz(idQuiz));
 
 
 
