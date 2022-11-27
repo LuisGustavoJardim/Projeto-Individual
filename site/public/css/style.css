@@ -136,28 +136,32 @@ body {
     color: white;
     flex-direction: row;
     background-image: linear-gradient( to top, #006cb7, #ffffff );
+    font-family: 'Bebas Neue', cursive;
+
 }
 .boxplayer {
     /* border: blue solid 2px; */
     height: 300px;
-    width: 20%;
+    width: 33%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: 17px;
     margin-left: 100px;
+
     
 }
 .boxplayer h3 {
     margin-top: 0px;
     margin-right: 105px;
+    font-size: 1.3rem;
 }
 .boxplayer h2 {
     margin-bottom: 5px;
     margin-top: 5px;
     color: black;
     margin-right: 105px;
+    font-size: 1.8rem;
 }
 .boxplayer img {
     height: 200px;

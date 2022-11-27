@@ -121,30 +121,30 @@
 
         if (nomeVar == "" || ipt_nome.value.length > 10) {
      
-            finalizarAguardar();
+            // finalizarAguardar();
             return false;
 
         }
         if (emailVar == "") {
             ipt_email.style.border = "1px solid red"
             mensagem_erro.innerHTML = "Preencha os campos corretamente!";   
-            finalizarAguardar();
+            // finalizarAguardar();
             return false;
 
         }
         if(indexArroba == -1){
             erro1.style.display = 'block'
-            finalizarAguardar();
+            // finalizarAguardar();
             return false;
         }
         if (indexPonto == -1){
             erro2.style.display = 'block'
-            finalizarAguardar();
+            // finalizarAguardar();
             return false;
         }
         if (senhaVar == "") {
             ipt_senha.style.border = "1px solid red"
-            finalizarAguardar();
+            // finalizarAguardar();
             return false;
 
         }
@@ -177,13 +177,13 @@
                 }, "2000")
 
                 limparFormulario();
-                finalizarAguardar();
+                // finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
+            // finalizarAguardar();
         });
 
         return false;

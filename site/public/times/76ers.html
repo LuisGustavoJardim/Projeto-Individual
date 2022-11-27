@@ -13,12 +13,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./arquivos/img/faviconNba.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="header">
         <a href="./index.html"><img  class="logo" src="./img-team/76ers.png" alt="ícone NBA"></a>
         <ul class="navbar">
-                
+                <a href="../ranking.html">Ranking</a>
                 <a href="../index.html">Sair</a>
             </li>
         </ul>
@@ -26,8 +29,7 @@
     <div class="quiz">
         <div class="pergunta">
 
-            <H1><span class="teste">TESTE</span> <span class="seu">SEU</span> <span
-                    class="conhecimento">CONHECIMENTO</span></H1>
+            <h1 class="titulo">TESTE SEU CONHECIMENTO SOBRE A NBA</h1>
 
             <p>1 – Qual foi o único time a virar uma série perdendo por 3x1 nas finais?</p>
             <select id="p1" class="pgt">
@@ -138,8 +140,8 @@
             <br>
             <br>
 
-                <button id="botão" onclick="enviar()">Enviar</button>
-                <div id="div_msg"></div>
+                <button id="botão" onclick="enviar()" class="botaoQuiz">Enviar</button>
+                <div id="div_msg" class="mensagemQuiz"></div>
         </div>
     </div>
 </div>
@@ -152,7 +154,7 @@
     var acertos = 0
 function enviar() {
     if (p1.value == "null" || p2.value == "null" || p3.value == "null" || p4.value == "null" || p5.value == "null" || p6.value == "null" || p7.value == "null" || p8.value == "null" || p9.value == "null" || p10.value == "null") {
-        alert('Todas opções precisam ser preenchidas')
+        alert('Todas as alterenativas precisam ser preenchidas')
     }
     else {
       acertos = Number(p1.value) + Number(p2.value) + Number(p3.value) + Number(p4.value) + Number(p5.value) + Number(p6.value) + Number(p7.value) + Number(p8.value) + Number(p9.value) + Number(p10.value);
