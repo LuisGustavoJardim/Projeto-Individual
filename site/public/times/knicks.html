@@ -151,17 +151,20 @@
 
 <script>
     var acertos = 0
+    var click = 0
 function enviar() {
+    
+    var nomeVar = sessionStorage.NOME_USUARIO
+    var usuarioVar = sessionStorage.ID_USUARIO
     if (p1.value == "null" || p2.value == "null" || p3.value == "null" || p4.value == "null" || p5.value == "null" || p6.value == "null" || p7.value == "null" || p8.value == "null" || p9.value == "null" || p10.value == "null") {
         alert('Todas as alterenativas precisam ser preenchidas')
     }
     else {
       acertos = Number(p1.value) + Number(p2.value) + Number(p3.value) + Number(p4.value) + Number(p5.value) + Number(p6.value) + Number(p7.value) + Number(p8.value) + Number(p9.value) + Number(p10.value);
-        div_msg.innerHTML = `Você teve um total de ${acertos} acertos!`
-       
+      div_msg.innerHTML = `Você teve um total de ${acertos} acertos!`
+      click ++
     }
-}
-fetch("/usuarios/pontuar", {
+    fetch("/usuarios/pontuar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -179,9 +182,10 @@ fetch("/usuarios/pontuar", {
         })
 
         return false;
+}
 </script>
 <div class="footer">
     <h4>Feito por um fã da LakerNation em homenagem ao Black Mamba <br>
     <span class="dono">Desenvolvido por Lg</span></h4>
     
-   </div>   
+   </div>    
