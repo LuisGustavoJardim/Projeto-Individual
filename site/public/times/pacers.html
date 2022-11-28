@@ -161,6 +161,24 @@ function enviar() {
        
     }
 }
+fetch("/usuarios/pontuar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                pontoServer: acertos,
+                nomeServer: nomeVar,
+                usuarioServer: usuarioVar
+
+            })
+        }).then(function (resposta) {
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
 </script>
 <div class="footer">
     <h4>Feito por um fã da LakerNation em homenagem ao Black Mamba <br>

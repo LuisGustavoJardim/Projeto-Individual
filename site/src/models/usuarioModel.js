@@ -30,9 +30,17 @@ function cadastrar(nome, email, time, senha) {
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
+function pontuar(nome, pontos) {
+    var instrucao = `
+        INSERT INTO pontuacao (nome, nota ) VALUES ('${nome}', ${pontos});
+    `
+    return database.executar(instrucao);
+}
 
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    pontuar
+    
 };

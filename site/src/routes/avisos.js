@@ -31,4 +31,9 @@ router.delete("/deletar/:idAviso", function (req, res) {
     avisoController.deletar(req, res);
 });
 
+router.get("/nota", function (req, res) {
+    avisoController.nota(req, res);
+});
+
+
 module.exports = router;

@@ -4,9 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/ranking.css">
+    <title>Ranking</title>
 </head>
-<body>
-    
+<body onload="atualizarFeed()">
+    <div class="header">
+        <a href="./index.html"><img  class="logo" src="./arquivos/img/Icon-nba.png" alt="ícone NBA"></a>
+        <ul class="navbar">
+                <a href="./index.html">Sair</a>
+            </li>
+        </ul>
+    </div>
+    <div class="div-results">
+        <div class="caixa-rank">
+            <h1>RANKING GERAL</h1>
+            <div id="feed_container" class="feed-container">
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
+<script>
+    function atualizarFeed() {
+        fetch("/avisos/nota").then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    var feed = document.getElementById("feed_container");
+                    var mensagem = document.createElement("span");
+                    mensagem.innerHTML = "Nenhum resultado encontrado."
+                    feed.appendChild(mensagem);
+                    throw "Nenhum resultado encontrado!!";
+                }
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    var feed = document.getElementById("feed_container");
+                    feed.innerHTML = "";
+                    for (let i = 0; i < resposta.length; i++) {
+                        var publicacao = resposta[i];
+                        var divRanking = document.createElement("div")
+
+                        // criando e manipulando elementos do HTML via JavaScript
+                        var divPublicacao = document.createElement("div");
+                        var spanID = document.createElement("span");
+                        var spanTitulo = document.createElement("span");
+                        var spanNome = document.createElement("span");
+                        var divDescricao = document.createElement("span");
+                        var divButtons = document.createElement("div");
+                        var btnEditar = document.createElement("div");
+                        var btnDeletar = document.createElement("div");
+
+                        var resultado = document.querySelector('.caixa-rank')
+                        resultado.appendChild(divRanking);
+                        divRanking.className = 'ranking'
+
+                        divRanking.appendChild(spanID);
+                        divRanking.appendChild(spanNome);
+                        divRanking.appendChild(divDescricao);
+                        
+
+                        spanID.innerHTML = "Posição: <b>" + (i + 1) + "</b> ";
+                        spanNome.innerHTML = " Nome: <b>" + publicacao.nome + "</b>";
+                        divDescricao.innerHTML = " Nota: <b>" + publicacao.nota + "</b>" + " Pontos";
+                       
+                       
+
+                    }
+
+    
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+        });
+    }
+</script>
