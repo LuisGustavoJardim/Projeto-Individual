@@ -15,10 +15,15 @@ tentativas int);
 
 create table pontuacao (
 idPontuacao int primary key auto_increment,
+nome varchar (45),
 nota int,
 fkQuiz int, foreign key (fkQuiz) references quiz(idQuiz));
 
-select * from usuario;
+select * from pontuacao;
+
+
+
+
 
 
 
